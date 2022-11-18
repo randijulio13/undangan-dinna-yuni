@@ -52,9 +52,15 @@ export default function Content({ cover }) {
         <CoupleInfo />
       </section>
 
-      <section className="relative z-10 bg-primary-900 lg:h-32">
+      {/* <section className="relative z-10 bg-primary-900 lg:h-32">
         <div className="absolute -bottom-[1px] w-full rotate-180 overflow-hidden">
           <Wave />
+        </div>
+      </section> */}
+
+      <section className="relative z-10 bg-primary-900">
+        <div className="absolute -bottom-[1px] w-full rotate-180">
+          <Curve />
         </div>
       </section>
 
@@ -62,19 +68,30 @@ export default function Content({ cover }) {
         <EventInfo />
       </section>
 
-      <section className="relative z-10 bg-primary-900 lg:h-32">
+      <section className="relative z-10 bg-primary-900">
+        <div className="absolute -top-[1px] w-full">
+          <Curve />
+        </div>
+      </section>
+
+      {/* <section className="relative z-10 bg-primary-900 lg:h-32">
         <div className="absolute -top-[1px] w-full overflow-hidden">
           <Wave />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative bg-gradient-to-b from-primary-900 via-primary-500 to-primary-900 py-20">
         <Gallery data={data} />
       </section>
 
-      <section className="relative z-10 bg-primary-900 lg:h-32">
+      {/* <section className="relative z-10 bg-primary-900 lg:h-32">
         <div className="absolute -bottom-[1px] w-full rotate-180 overflow-hidden">
           <WaveOpacity />
+        </div>
+      </section> */}
+      <section className="relative z-10 bg-primary-900">
+        <div className="absolute -bottom-[1px] w-full rotate-180">
+          <Curve />
         </div>
       </section>
 
@@ -83,12 +100,17 @@ export default function Content({ cover }) {
         <Protocol />
         <Comments />
       </section>
+      <section className="relative z-10 bg-primary-900">
+        <div className="absolute -top-[1px] w-full">
+          <Curve />
+        </div>
+      </section>
 
-      <section className="relative z-10 bg-white lg:h-32">
+      {/* <section className="relative z-10 bg-white lg:h-32">
         <div className="absolute -bottom-[1px] w-full rotate-180 overflow-hidden">
           <Wave className="fill-primary-900" />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative bg-primary-900">
         <Footer />
