@@ -1,0 +1,82 @@
+{
+  "eventId": 1,
+  "name": "Yuni & Dinna",
+  "slug": "yuni-dina",
+  "template": "first-template",
+  "contractDate": "2022-12-11 07:00",
+  "receptionDate": "2022-12-11 10:00",
+  "contractAddress": "Jl. Diponegoro No.2165, Talang Semut, Kec. Bukit Kecil Palembang - Sumatera Selatan",
+  "receptionAddress": "Jl. Diponegoro No.2165, Talang Semut, Kec. Bukit Kecil Palembang - Sumatera Selatan",
+  "contractPlace": "Gedung AEKI Palembang",
+  "receptionPlace": "Gedung AEKI Palembang",
+  "contractUrl": "https://goo.gl/maps/v7Czc5t7RfiLk5zS8",
+  "receptionUrl": "https://goo.gl/maps/v7Czc5t7RfiLk5zS8",
+  "couple": [
+    {
+      "fullName": "Muhammad Yuni Irawan",
+      "nickName": "Yuni",
+      "motherName": "Naimah, S.Pd",
+      "fatherName": "Hasyim, S.Pd",
+      "dob": "1990-01-10",
+      "pob": "Palembang",
+      "photos": "../../photos/groom.jpg",
+      "type": "Groom",
+      "instagram": "https://instagram.com/muhammad_yuniirawan"
+    },
+    {
+      "fullName": "Dinna Fransisca, S.Kep., Ners",
+      "nickName": "Dinna",
+      "motherName": "Octarina",
+      "fatherName": "Rizal Nudin",
+      "dob": "1990-10-01",
+      "pob": "Palembang",
+      "photos": "../../photos/bride.jpg",
+      "type": "Bride",
+      "instagram": "https://instagram.com/dinnafrnssca"
+    }
+  ],
+  "photos": {
+    "cover": "../../photos/sm/1.jpg",
+    "groom": "../../photos/groom.jpg",
+    "bride": "../../photos/bride.jpg",
+    "cardContract": "../../photos/sm/3.jpg",
+    "cardReception": "../../photos/sm/4.jpg",
+    "coverPortrait": "../../photos/sm/5.jpg",
+    "all": [
+      "../../photos/sm/1.jpg",
+      "../../photos/sm/2.jpg",
+      "../../photos/sm/3.jpg",
+      "../../photos/sm/4.jpg",
+      "../../photos/sm/5.jpg",
+      "../../photos/sm/6.jpg",
+      "../../photos/sm/7.jpg",
+      "../../photos/sm/8.jpg",
+      "../../photos/sm/9.jpg",
+      "../../photos/sm/10.jpg",
+      "../../photos/sm/11.jpg",
+      "../../photos/sm/12.jpg"
+    ],
+    "allXs": [
+      "../../photos/xs/1.jpg",
+      "../../photos/xs/2.jpg",
+      "../../photos/xs/3.jpg",
+      "../../photos/xs/4.jpg",
+      "../../photos/xs/5.jpg",
+      "../../photos/xs/6.jpg",
+      "../../photos/xs/7.jpg",
+      "../../photos/xs/8.jpg",
+      "../../photos/xs/9.jpg",
+      "../../photos/xs/10.jpg",
+      "../../photos/xs/11.jpg",
+      "../../photos/xs/12.jpg"
+    ]
+  },
+  "gift": {
+    "transfer": {
+      "name": "Dinna Fransisca",
+      "bankName": "Bank Mandiri",
+      "bankLogo": "../../bank.png",
+      "accountNumber": "1300020972462"
+    }
+  }
+}
