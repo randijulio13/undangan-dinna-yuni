@@ -24,7 +24,7 @@ function FormComment({ getComments }) {
     let name = nameRef.current.value;
 
     if (!comment) {
-      return toast.error("There is no wishes", {
+      return toast.warning("You have to type something.", {
         position: "bottom-center",
         autoClose: 5000,
         hideProgressBar: true,
@@ -74,7 +74,7 @@ function FormComment({ getComments }) {
 
   return isOnList ? (
     <div className="w-full px-4">
-      <form className="flex w-full flex-col space-y-4" onSubmit={handleSubmitForm}>
+      <form className="flex w-full flex-col space-y-4" onSubmit={handleSubmitForm} disabled>
         <input
           ref={nameRef}
           type="text"
