@@ -40,12 +40,26 @@ const customBlue = {
   900: "#357fb3",
 };
 
+const main = {
+  50: "#fff7e1",
+  100: "#f9edd7",
+  200: "#efe3cd",
+  300: "#e5d9c3",
+  400: "#dbcfb9",
+  500: "#d1c5af",
+  600: "#c7bba5",
+  700: "#bdb19b",
+  800: "#b3a791",
+  900: "#bdb19b",
+  // 900: "#a99d87",
+};
+
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: customBlue,
+        primary: main,
       },
       fontFamily: {
         sans: ["Quicksand", ...defaultTheme.fontFamily.sans],

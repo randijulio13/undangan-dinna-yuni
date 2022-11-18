@@ -8,9 +8,14 @@ export default function Cover({ cover, setCover, data, to }) {
   const handleMusic = useContext(HandleMusicContext);
   const [isLoading, setIsLoading] = useState(true);
 
-  setTimeout(() => {
+  const handleLoading = () => {
     setIsLoading(false);
-  }, 2000);
+  };
+
+  useEffect(() => {
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, []);
 
   function handleOpenCover() {
     setCover((cover) => !cover);
