@@ -24,7 +24,7 @@ function FormComment({ getComments }) {
     let name = nameRef.current.value;
 
     if (!comment) {
-      toast.error("There is no wishes", {
+      return toast.error("There is no wishes", {
         position: "bottom-center",
         autoClose: 5000,
         hideProgressBar: true,
