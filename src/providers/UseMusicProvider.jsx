@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { useEffect } from "react";
 import useSound from "use-sound";
 import bgMusic from "../bg.mp3";
 

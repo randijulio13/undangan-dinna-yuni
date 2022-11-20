@@ -5,7 +5,6 @@ import ButtonMusic from "./ButtonMusic";
 import Comments from "./Comments";
 import CountDown from "./CountDown";
 import CoupleInfo from "./CoupleInfo";
-import Curve from "./Curve";
 import EventInfo from "./EventInfo";
 import Footer from "./Footer";
 import Gallery from "./Gallery";
@@ -13,8 +12,6 @@ import Gift from "./Gift";
 import Hero from "./Hero";
 import Protocol from "./Protocol";
 import Quotes from "./Quotes";
-import Wave from "./Wave";
-import WaveOpacity from "./WaveOpacity";
 
 export default function Content({ cover }) {
   const isPlaying = useContext(ToggleMusicContext);
