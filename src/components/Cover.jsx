@@ -9,14 +9,15 @@ export default function Cover({ cover, setCover, data, to }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoading = () => {
-    if (document.readyState === "complete") {
-      setIsLoading(false);
-    }
+    setIsLoading(false);
   };
 
   useEffect(() => {
-    window.addEventListener("readystatechange", handleLoading);
-    return () => window.removeEventListener("readystatechange", handleLoading);
+    window.addEventListener("load", handleLoading);
+    setTimeout(() => {
+      handleLoading;
+    }, 2000);
+    return () => window.removeEventListener("load", handleLoading);
   }, []);
 
   function handleOpenCover() {
