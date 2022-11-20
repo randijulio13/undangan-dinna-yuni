@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import eventData from "../data";
 import { BsTrashFill } from "react-icons/bs";
 import Swal from "sweetalert2";
+import { FiCopy } from "react-icons/fi";
+import qs from "querystringify";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function Guests() {
   const [guests, setGuests] = useState([]);
@@ -52,6 +55,22 @@ export default function Guests() {
       });
   };
 
+  const handleCopy = async (e, to) => {
+    let params = qs.stringify({ to }, true);
+    let url = `${window.location.hostname}/${params}`;
+    navigator.clipboard.writeText(url);
+    toast.success("Link berhasil disalin", {
+      position: "bottom-center",
+      autoClose: 1000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   useEffect(() => {
     getGuests();
   }, [search]);
@@ -83,12 +102,20 @@ export default function Guests() {
                   <span>
                     {index + 1}. {guest.name}
                   </span>
-                  <button
-                    className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
-                    onClick={(e) => handleDelete(e, guest.id)}
-                  >
-                    <BsTrashFill />
-                  </button>
+                  <div className="flex gap-1">
+                    <button
+                      className="rounded-lg bg-blue-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-blue-700 hover:outline-none"
+                      onClick={(e) => handleCopy(e, guest.name)}
+                    >
+                      <FiCopy />
+                    </button>
+                    <button
+                      className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
+                      onClick={(e) => handleDelete(e, guest.id)}
+                    >
+                      <BsTrashFill />
+                    </button>
+                  </div>
                 </div>
               );
             })
@@ -97,6 +124,7 @@ export default function Guests() {
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

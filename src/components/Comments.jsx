@@ -1,14 +1,13 @@
+import axios from "axios";
+import moment from "moment/moment";
 import React, { useEffect, useRef, useState } from "react";
+import { BiSend } from "react-icons/bi";
+import { CgSpinnerTwo } from "react-icons/cg";
+import { FiClock } from "react-icons/fi";
+import { toast } from "react-toastify";
+import eventData from "../data";
 import useCheckGuest from "../hooks/useCheckGuest";
 import useQuery from "../hooks/useQuery";
-import { BiSend } from "react-icons/bi";
-import { toast } from "react-toastify";
-import axios from "axios";
-import eventData from "../data";
-import moment from "moment/moment";
-import qs from "querystringify";
-import { FiClock } from "react-icons/fi";
-import { CgSpinnerTwo } from "react-icons/cg";
 
 function FormComment({ getComments }) {
   const query = useQuery();
