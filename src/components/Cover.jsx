@@ -12,13 +12,14 @@ export default function Cover({ cover, setCover, data, to }) {
     setIsLoading(false);
   };
 
-  useEffect(() => {
-    window.addEventListener("load", handleLoading);
-    setTimeout(() => {
-      handleLoading;
-    }, 2000);
-    return () => window.removeEventListener("load", handleLoading);
-  }, []);
+  setTimeout(() => {
+    handleLoading();
+  }, 3000);
+
+  // useEffect(() => {
+  //   window.addEventListener("load", handleLoading);
+  //   return () => window.removeEventListener("load", handleLoading);
+  // }, []);
 
   function handleOpenCover() {
     setCover((cover) => !cover);
