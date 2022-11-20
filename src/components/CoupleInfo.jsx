@@ -7,7 +7,7 @@ function Detail({ couple, ...props }) {
     <div className="flex h-full w-full flex-col items-center justify-center gap-8" {...props}>
       <img
         src={couple.photos}
-        className="w-[70%] rounded-full border-[3px] border-white shadow-2xl duration-500 hover:scale-105 lg:w-full  lg:rounded-[100px]"
+        className="w-[70%] rounded shadow-2xl duration-500 hover:scale-105 lg:w-full"
       />
       <span className="text-center font-cursive text-8xl text-white" {...props}>
         {couple.nickName}

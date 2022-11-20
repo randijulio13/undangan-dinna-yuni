@@ -7,7 +7,7 @@ import data from "../data";
 
 function Card({ children, img }) {
   return (
-    <div className="relative aspect-[3/7] w-80 overflow-hidden rounded-[40px] border-4 border-white text-white shadow-lg shadow-black/20" data-aos="fade-up">
+    <div className="relative aspect-[3/7] w-80 overflow-hidden rounded text-white shadow-lg shadow-black/20" data-aos="fade-up">
       <div className="absolute inset-0">
         <img src={img} className="h-full w-full object-cover" alt="" />
       </div>

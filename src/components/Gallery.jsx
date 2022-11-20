@@ -11,7 +11,7 @@ export default function Gallery() {
         {data.photos.allXs.map((src, index) => {
           return (
             <div key={index} className="flex items-center justify-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <img src={src} alt="" className="h-full rounded-3xl shadow-md duration-700 hover:scale-110" />
+              <img src={src} alt="" className="h-full rounded shadow-md duration-700 hover:scale-110" />
             </div>
           );
         })}

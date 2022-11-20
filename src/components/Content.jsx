@@ -27,21 +27,21 @@ export default function Content({ cover }) {
         <Hero />
       </section>
 
-      <section className="relative z-10 bg-primary-900">
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -bottom-[1px] w-full rotate-180">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative bg-white py-20">
         <Quotes />
       </section>
 
-      <section className="relative z-10 bg-primary-900">
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -top-[1px] w-full">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative bg-primary-900 py-20 lg:p-20">
         <div className={`absolute inset-0`}>
@@ -58,21 +58,21 @@ export default function Content({ cover }) {
         </div>
       </section> */}
 
-      <section className="relative z-10 bg-primary-900">
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -bottom-[1px] w-full rotate-180">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative bg-white py-20">
         <EventInfo />
       </section>
 
-      <section className="relative z-10 bg-primary-900">
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -top-[1px] w-full">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="relative z-10 bg-primary-900 lg:h-32">
         <div className="absolute -top-[1px] w-full overflow-hidden">
@@ -89,22 +89,24 @@ export default function Content({ cover }) {
           <WaveOpacity />
         </div>
       </section> */}
-      <section className="relative z-10 bg-primary-900">
+
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -bottom-[1px] w-full rotate-180">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       <section className="relative space-y-10 bg-white py-20">
         <Gift />
         <Protocol />
         <Comments />
       </section>
-      <section className="relative z-10 bg-primary-900">
+
+      {/* <section className="relative z-10 bg-primary-900">
         <div className="absolute -top-[1px] w-full">
           <Curve />
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="relative z-10 bg-white lg:h-32">
         <div className="absolute -bottom-[1px] w-full rotate-180 overflow-hidden">

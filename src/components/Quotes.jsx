@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeart } from "react-icons/fa";
+import { FaCircle, FaHeart } from "react-icons/fa";
 import data from "../data";
 
 export default function Quotes() {
@@ -9,8 +9,8 @@ export default function Quotes() {
         <span className="text-center font-serif text-5xl" data-aos="fade-up">
           {data.couple[0].nickName.charAt(0)}
         </span>
-        <span className="text-center font-serif text-xl" data-aos="fade-up" data-aos-delay="200">
-          <FaHeart />
+        <span className="text-center font-serif text-xs" data-aos="fade-up" data-aos-delay="200">
+          <FaCircle />
         </span>
         <span className="text-center font-serif text-5xl" data-aos="fade-up" data-aos-delay="100">
           {data.couple[1].nickName.charAt(0)}
