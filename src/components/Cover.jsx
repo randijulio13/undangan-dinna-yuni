@@ -8,13 +8,16 @@ export default function Cover({ cover, setCover, data, to }) {
   const handleMusic = useContext(HandleMusicContext);
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleLoading = () => {
-    setIsLoading(false);
-  };
-
   useEffect(() => {
-    window.addEventListener("load", handleLoading);
-    return () => window.removeEventListener("load", handleLoading);
+    const handleLoading = () => {
+      setIsLoading(false);
+    };
+    if (document.readyState === "complete") {
+      handleLoading();
+    } else {
+      window.addEventListener("load", handleLoading);
+      return () => window.removeEventListener("load", handleLoading);
+    }
   }, []);
 
   function handleOpenCover() {
