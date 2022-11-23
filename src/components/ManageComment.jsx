@@ -1,11 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
-import eventData from "../data";
-import { BsTrashFill } from "react-icons/bs";
-import Swal from "sweetalert2";
-import { FiCopy } from "react-icons/fi";
 import qs from "querystringify";
+import React, { useEffect, useState } from "react";
+import { BsTrashFill } from "react-icons/bs";
 import { toast, ToastContainer } from "react-toastify";
+import Swal from "sweetalert2";
+import eventData from "../data";
 
 export default function ManageComment() {
   const [comments, setComments] = useState([]);
@@ -78,7 +77,7 @@ export default function ManageComment() {
                 <>
                   <div key={comment.id} className="flex items-center justify-between">
                     <div className="flex flex-col">
-                      <span>
+                      <span className="font-semibold">
                         {index + 1}. {comment.name}
                       </span>
                       <p>{comment.comment}</p>

@@ -5,19 +5,16 @@ import data from "../data";
 function Detail({ couple, ...props }) {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-8" {...props}>
-      <img
-        src={couple.photos}
-        className="w-[70%] rounded shadow-2xl duration-500 hover:scale-105 lg:w-full"
-      />
+      <img src={couple.photos} className="w-[70%] rounded-2xl shadow-2xl duration-500 hover:scale-105 lg:w-full" />
       <span className="text-center font-cursive text-8xl text-white" {...props}>
         {couple.nickName}
       </span>
       <div className="h-[1px] w-1/3 rounded-full bg-gray-100" {...props}></div>
-      <span className="text-center font-serif text-3xl text-white/30" {...props}>
+      <span className="text-center font-serif text-2xl lg:text-3xl text-white/30" {...props}>
         {couple.fullName}
       </span>
-      <span className="text-medium px-4 text-center font-sans text-lg text-white" {...props}>
-        {couple.type == "Groom" ? "Putra" : "Putri"} dari Bapak {couple.fatherName} dan Ibu {couple.motherName}
+      <span className="text-medium text px-4 text-center lg:text-lg font-sans text-white" {...props}>
+        {couple.type == "Groom" ? "Putra" : "Putri"} dari Bapak {couple.fatherName} <br /> dan Ibu {couple.motherName}
       </span>
       <div className="flex h-full w-full items-center justify-center" {...props}>
         <a href={couple.instagram} className="rounded-full bg-white p-3 text-2xl text-primary-900 duration-300 hover:bg-primary-400 hover:text-white">

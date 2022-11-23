@@ -12,6 +12,7 @@ import Gift from "./Gift";
 import Hero from "./Hero";
 import Protocol from "./Protocol";
 import Quotes from "./Quotes";
+import Story from "./Story";
 
 export default function Content({ cover }) {
   const isPlaying = useContext(ToggleMusicContext);
@@ -96,6 +97,13 @@ export default function Content({ cover }) {
       <section className="relative space-y-10 bg-white py-20">
         <Gift />
         <Protocol />
+      </section>
+
+      <section className="relative space-y-10 bg-primary-900 py-20">
+        <Story />
+      </section>
+
+      <section className="relative space-y-10 bg-white py-20">
         <Comments />
       </section>
 

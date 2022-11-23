@@ -37,38 +37,24 @@
   ],
   "photos": {
     "cover": "../../photos/sm/1.jpg",
-    "groom": "../../photos/groom.jpg",
-    "bride": "../../photos/bride.jpg",
-    "cardContract": "../../photos/sm/3.jpg",
-    "cardReception": "../../photos/sm/4.jpg",
+    "groom": "../../photos/sm/groom.jpg",
+    "bride": "../../photos/sm/bride.jpg",
+    "cardContract": "../../photos/sm/14.jpg",
+    "cardReception": "../../photos/sm/15.jpg",
     "coverPortrait": "../../photos/sm/5.jpg",
     "all": [
-      "../../photos/sm/1.jpg",
+      "../../photos/sm/12.jpg",
       "../../photos/sm/2.jpg",
       "../../photos/sm/3.jpg",
       "../../photos/sm/4.jpg",
-      "../../photos/sm/5.jpg",
-      "../../photos/sm/6.jpg",
-      "../../photos/sm/7.jpg",
-      "../../photos/sm/8.jpg",
+      "../../photos/sm/14.jpg",
+      "../../photos/sm/20.jpg",
+      "../../photos/sm/16.jpg",
+      "../../photos/sm/15.jpg",
       "../../photos/sm/9.jpg",
       "../../photos/sm/10.jpg",
       "../../photos/sm/11.jpg",
-      "../../photos/sm/12.jpg"
-    ],
-    "allXs": [
-      "../../photos/xs/1.jpg",
-      "../../photos/xs/2.jpg",
-      "../../photos/xs/3.jpg",
-      "../../photos/xs/4.jpg",
-      "../../photos/xs/5.jpg",
-      "../../photos/xs/6.jpg",
-      "../../photos/xs/7.jpg",
-      "../../photos/xs/8.jpg",
-      "../../photos/xs/9.jpg",
-      "../../photos/xs/10.jpg",
-      "../../photos/xs/11.jpg",
-      "../../photos/xs/12.jpg"
+      "../../photos/sm/1.jpg"
     ]
   },
   "gift": {
@@ -78,5 +64,22 @@
       "bankLogo": "../../bank.png",
       "accountNumber": "1300020972462"
     }
-  }
+  },
+  "story": [
+    {
+      "title": "First Meet",
+      "description": "Pada akhir bulan April 2021 Pertama kali ketemu di acara buka bersama klinik kecantikan athena palembang tempat dinna kerja, acaranya di hotel Novotel tempat yuni bekerja. Pada saat itu saya sedang welcoming tamu tamu bukber tsb, dan ketemu dg dinna salah satu tamu acara tsb. Berawal dari dinna & temen2nya minta fotoin sama saya kita berkenalan dan professional sebagai tamu & staff. Tanpa minta wa & ig, saya usaha sendiri  mencari ig nya dinna saya follow & DM lanjut ke WA. Tapi dinna masih belum terlalu respon ke saya saat itu.",
+      "background":"../../photos/sm/12.jpg"
+    },
+    {
+      "title": "Propose",
+      "description": "Di bulan oktober Dinna di mutasi kerja di kota bandung. Beberapa bulan dinna di Bandung, saya datang menghampiri menemui Dinna beberapa kali di bandung untuk menunjukkan bahwa saya serius ingin menjalin hubungan dengnnya. Tanpa sepengetahuan dinna, saya berniat silahturahmi saat lebaran bulan Mei 2022 langsung membawa keluarga besar saya dan mengajak dinna untuk komitmen ke jenjang pernikahan dan mengikat hubungan dg tukar cincin. Sejak saat inilah dinna respon aktif ke saya.",
+      "background":"../../photos/sm/2.jpg"
+    },
+    {
+      "title": "Married",
+      "description": "Setelah 1 tahun menjalani masa masa LDR yang penuh drama suka cita. Akhirnya saya memutuskan untuk kerumahnya pada saat lebaran bulan Mei 2022, disitulah saya menunjukan keseriusan saya dengan dinna langsung mengikat janji dan berkomitmen ke jenjang pernikahan. Langsung merencanakan proses lamaran sampai saat ini saya menikahinya. Karena di awal saya mendekati dinna saya sudah janji saya ingin serius & menikahinya di awal desember 2022.",
+      "background":"../../photos/sm/14.jpg"
+    }
+  ]
 }
