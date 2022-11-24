@@ -40,7 +40,7 @@ function FormComment({ getComments }) {
       .post(url, {
         name,
         comment,
-        eventId: eventData.eventId,
+        event_id: eventData.eventId,
         timestamp: moment(),
       })
       .then(() => {

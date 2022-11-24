@@ -6,9 +6,9 @@ export default function useGetGuests() {
   const [guests, setGuests] = useState();
 
   const getGuests = async () => {
-    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}/guests`;
+    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}`;
     let { data } = await axios(url);
-    setGuests(data);
+    setGuests(data.guests);
   };
 
   useEffect(() => {

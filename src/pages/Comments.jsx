@@ -6,14 +6,14 @@ import { toast, ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
 import eventData from "../data";
 
-export default function ManageComment() {
+export default function Comment() {
   const [comments, setComments] = useState([]);
   const [search, setSearch] = useState("");
 
   const getComments = async () => {
-    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}/comments?name_like=${search}`;
+    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}`;
     let { data } = await axios(url);
-    setComments(data);
+    setComments(data.comments);
   };
 
   const deleteComment = async (id) => {
@@ -40,25 +40,9 @@ export default function ManageComment() {
     });
   };
 
-  const handleCopy = async (e, to) => {
-    let params = qs.stringify({ to }, true);
-    let url = `${window.location.hostname}/${params}`;
-    navigator.clipboard.writeText(url);
-    toast.success("Link berhasil disalin", {
-      position: "bottom-center",
-      autoClose: 1000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-    });
-  };
-
   useEffect(() => {
     getComments();
-  }, [search]);
+  }, []);
 
   return (
     <div className="flex min-h-screen w-full justify-center bg-primary-50 p-5 lg:p-10">
@@ -72,27 +56,29 @@ export default function ManageComment() {
         />
         <div className="my-4 flex flex-col space-y-2">
           {comments.length > 0 ? (
-            comments.map((comment, index) => {
-              return (
-                <>
-                  <div key={comment.id} className="flex items-center justify-between">
-                    <div className="flex flex-col">
-                      <span className="font-semibold">
-                        {index + 1}. {comment.name}
-                      </span>
-                      <p>{comment.comment}</p>
+            comments
+              .filter((comment) => comment.name.toLowerCase().includes(search.toLowerCase()))
+              .map((comment, index) => {
+                return (
+                  <div key={comment.id}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-col">
+                        <span className="font-semibold">
+                          {index + 1}. {comment.name}
+                        </span>
+                        <p>{comment.comment}</p>
+                      </div>
+                      <button
+                        className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
+                        onClick={(e) => handleDelete(e, comment.id)}
+                      >
+                        <BsTrashFill />
+                      </button>
                     </div>
-                    <button
-                      className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
-                      onClick={(e) => handleDelete(e, comment.id)}
-                    >
-                      <BsTrashFill />
-                    </button>
+                    <hr />
                   </div>
-                  <hr />
-                </>
-              );
-            })
+                );
+              })
           ) : (
             <h1 className="text-center">No Data</h1>
           )}

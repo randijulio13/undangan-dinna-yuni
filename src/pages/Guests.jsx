@@ -6,17 +6,18 @@ import Swal from "sweetalert2";
 import { FiCopy } from "react-icons/fi";
 import qs from "querystringify";
 import { toast, ToastContainer } from "react-toastify";
+import { useCallback } from "react";
 
 export default function Guests() {
   const [guests, setGuests] = useState([]);
   const [search, setSearch] = useState("");
   const inputRef = useRef("");
 
-  const getGuests = async () => {
-    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}/guests?name_like=${search}`;
+  const getGuests = useCallback(async () => {
+    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}`;
     let { data } = await axios(url);
-    setGuests(data);
-  };
+    setGuests(data.guests);
+  }, [eventData.eventId]);
 
   const deleteGuest = async (id) => {
     let url = `${import.meta.env.VITE_JSON_URL}/guests/${id}`;
@@ -44,10 +45,11 @@ export default function Guests() {
 
   const handleInput = async (e) => {
     e.preventDefault();
-    let url = `${import.meta.env.VITE_JSON_URL}/events/${eventData.eventId}/guests`;
+    let url = `${import.meta.env.VITE_JSON_URL}/guests`;
     axios
       .post(url, {
         name: inputRef.current.value,
+        event_id: eventData.eventId,
       })
       .then(() => {
         inputRef.current.value = "";
@@ -73,7 +75,9 @@ export default function Guests() {
 
   useEffect(() => {
     getGuests();
-  }, [search]);
+  }, []);
+
+  useEffect(() => {}, [search]);
 
   return (
     <div className="flex min-h-screen w-full justify-center bg-primary-50 p-5 lg:p-10">
@@ -81,7 +85,9 @@ export default function Guests() {
         <h1 className="font-cursive text-6xl font-medium">Guests List</h1>
         <input
           placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
           type="text"
           className="w-full rounded-lg py-2 px-4 outline-none outline outline-gray-200 focus:outline-none focus:ring focus:ring-primary-50"
         />
@@ -96,29 +102,33 @@ export default function Guests() {
         </form>
         <div className="my-4 flex flex-col space-y-2">
           {guests.length > 0 ? (
-            guests.map((guest, index) => {
-              return (
-                <div key={guest.id} className="flex items-center justify-between">
-                  <span>
-                    {index + 1}. {guest.name}
-                  </span>
-                  <div className="flex gap-1">
-                    <button
-                      className="rounded-lg bg-blue-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-blue-700 hover:outline-none"
-                      onClick={(e) => handleCopy(e, guest.name)}
-                    >
-                      <FiCopy />
-                    </button>
-                    <button
-                      className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
-                      onClick={(e) => handleDelete(e, guest.id)}
-                    >
-                      <BsTrashFill />
-                    </button>
+            guests
+              .filter((guest) => {
+                return guest.name.toLowerCase().includes(search.toLowerCase());
+              })
+              .map((guest, index) => {
+                return (
+                  <div key={guest.id} className="flex items-center justify-between">
+                    <span>
+                      {index + 1}. {guest.name}
+                    </span>
+                    <div className="flex gap-1">
+                      <button
+                        className="rounded-lg bg-blue-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-blue-700 hover:outline-none"
+                        onClick={(e) => handleCopy(e, guest.name)}
+                      >
+                        <FiCopy />
+                      </button>
+                      <button
+                        className="rounded-lg bg-red-500 py-2 px-4 text-sm text-white outline-none duration-500 hover:bg-red-700 hover:outline-none"
+                        onClick={(e) => handleDelete(e, guest.id)}
+                      >
+                        <BsTrashFill />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })
+                );
+              })
           ) : (
             <h1 className="text-center">No Data</h1>
           )}
