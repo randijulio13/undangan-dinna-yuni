@@ -66,6 +66,10 @@ export default function Comment() {
                         <span className="font-semibold">
                           {index + 1}. {comment.name}
                         </span>
+                        <span className="flex items-center space-x-2 font-normal text-gray-400">
+                          <FiClock />
+                          <span>{moment(comment.created_at).fromNow()}</span>
+                        </span>
                         <p>{comment.comment}</p>
                       </div>
                       <button

@@ -41,7 +41,6 @@ function FormComment({ getComments }) {
         name,
         comment,
         event_id: eventData.eventId,
-        timestamp: moment(),
       })
       .then(() => {
         toast.success("Thank you for your wishes! 😊", {
@@ -149,7 +148,7 @@ export default function Comments() {
                     <span className="font-medium">{comment.name}</span>
                     <span className="flex items-center space-x-2 font-normal text-gray-400">
                       <FiClock />
-                      <span>{moment(comment.timestamp).fromNow()}</span>
+                      <span>{moment(comment.created_at).fromNow()}</span>
                     </span>
                   </div>
                   <p>{comment.comment}</p>
