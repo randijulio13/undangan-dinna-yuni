@@ -62,12 +62,20 @@
     ]
   },
   "gift": {
-    "transfer": {
-      "name": "Dinna Fransisca",
-      "bankName": "Bank Mandiri",
-      "bankLogo": "../../bank.png",
-      "accountNumber": "1300020972462"
-    }
+    "transfer": [
+      {
+        "name": "Dinna Fransisca",
+        "bankName": "Bank Mandiri",
+        "bankLogo": "../../mandiri.png",
+        "accountNumber": "1300020972462"
+      },
+      {
+        "name": "M Yuni Irawan",
+        "bankName": "Bank BNI",
+        "bankLogo": "../../bni.png",
+        "accountNumber": "0706444071"
+      }
+    ]
   },
   "story": [
     {
