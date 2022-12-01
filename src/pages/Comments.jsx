@@ -1,9 +1,9 @@
 import axios from "axios";
-import qs from "querystringify";
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { BsTrashFill } from "react-icons/bs";
 import { FiClock } from "react-icons/fi";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
 import eventData from "../data";
 
@@ -46,7 +46,7 @@ export default function Comment() {
   }, []);
 
   return (
-    <div className="flex min-h-screen w-full justify-center bg-primary-50 p-5 lg:p-10">
+    <div className="flex min-h-screen w-full justify-center bg-primary-900 p-5 lg:p-10">
       <div className="flex w-full flex-col space-y-5 rounded-2xl bg-white p-10 md:w-4/5 lg:w-1/3">
         <h1 className="font-cursive text-6xl font-medium">Comments List</h1>
         <input
