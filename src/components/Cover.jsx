@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEnvelopeOpen } from "react-icons/fa";
 import { HandleMusicContext } from "../providers/UseMusicProvider";
 import Loading from "./Loading";
@@ -51,16 +51,14 @@ export default function Cover({ cover, setCover, data, to }) {
           <div className="absolute bottom-20 flex flex-col items-center justify-center gap-2 text-white">
             <h1>You're invited :</h1>
             <h1 className="text-3xl font-medium">{to}</h1>
-            <p className="my-4 text-center font-serif font-light">
-              Mohon Maaf apabila ada <br></br> kesalahan penulisan Nama / Gelar
-            </p>
+            <p className="m-4 text-center font-serif font-light">Please accept our sincere apologies if we misspelled your name</p>
             <button
               type="button"
               onClick={handleOpenCover}
               className="mt-2 flex items-center gap-2 rounded-full bg-white py-2 px-4 text-sm text-black shadow-lg duration-300 hover:scale-110 hover:bg-gray-100 focus:outline-none"
             >
               <FaEnvelopeOpen />
-              Buka Undangan
+              Open Invitation
             </button>
           </div>
         </div>

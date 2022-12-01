@@ -2,8 +2,7 @@ import React from "react";
 import moment from "moment/moment";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import data from "../data";
-import "moment/locale/id";
-moment.locale("id");
+moment.locale("en");
 
 export default function Hero() {
   const day = moment(data.contractDate).format("dddd, LL");

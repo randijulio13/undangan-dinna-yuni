@@ -1,12 +1,11 @@
 import React from "react";
 import data from "../data";
+import Title from "./Title";
 
 export default function Gallery() {
   return (
     <>
-      <h1 className="text-center font-[tangerine] text-5xl font-semibold text-white" data-aos="fade-up">
-        Our Gallery
-      </h1>
+      <Title>Our Gallery</Title>
       <div className="mx-10 mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
         {data.photos.all.map((src, index) => {
           return (

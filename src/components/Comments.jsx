@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import eventData from "../data";
 import useCheckGuest from "../hooks/useCheckGuest";
 import useQuery from "../hooks/useQuery";
+import Title from "./Title";
 
 function FormComment({ getComments }) {
   const query = useQuery();
@@ -135,9 +136,7 @@ export default function Comments() {
   return (
     <div className="flex flex-col items-center justify-center px-5 py-10">
       <div className="flex w-full flex-col items-center justify-center space-y-10 overflow-hidden rounded-3xl bg-primary-100/30 py-10 lg:w-2/3">
-        <h1 className="text-center font-cursive text-6xl" data-aos="fade-up">
-          Best Wishes
-        </h1>
+        <Title className={`text-black`}>Best Wishes</Title>
         <FormComment {...{ getComments }} />
         <div className="flex w-full flex-col items-center justify-center space-y-4" data-aos="fade-up">
           {comments.map((comment, index) => {

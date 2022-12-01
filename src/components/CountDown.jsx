@@ -1,15 +1,14 @@
 import React from "react";
 import useCountDown from "../hooks/useCountDown";
+import Title from "./Title";
 
 export default function CountDown({ date }) {
   const { days, hours, minutes, seconds } = useCountDown(date);
   return (
     <div className="mb-28 flex justify-center lg:mb-10">
       <div className="lg:w-2/3">
-        <h1 className="text-center font-cursive text-6xl font-medium text-white" data-aos="fade-up">
-          Count The Date
-        </h1>
-        <div className="my-5 grid animate-pulse grid-cols-2 gap-10 font-serif text-4xl lg:grid-cols-4" data-aos="fade-up">
+        <Title>Count The Date</Title>
+        <div className="my-5 grid animate-pulse grid-cols-2 gap-10 font-serif text-3xl lg:grid-cols-4" data-aos="fade-up">
           <div className="flex aspect-[1/1] flex-col items-center justify-center rounded-full text-white duration-300 hover:scale-110 hover:bg-black hover:bg-opacity-5">
             <h1>{days}</h1>
             <h1>Days</h1>

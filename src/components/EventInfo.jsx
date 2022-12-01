@@ -4,6 +4,7 @@ import "moment/locale/id"; // without this line it didn't work
 moment.locale("id");
 import { FaMapMarkedAlt, FaMapMarkerAlt } from "react-icons/fa";
 import data from "../data";
+import Title from "./Title";
 
 function Card({ children, img }) {
   return (
@@ -27,9 +28,7 @@ export default function EventInfo() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-center font-[tangerine] text-5xl font-semibold" data-aos="fade-up">
-        Assalamu’alaikum Warahmatullahi Wabarakatuh
-      </h1>
+      <Title className={`text-black`}>Assalamu’alaikum Warahmatullahi Wabarakatuh</Title>
       <p className="mt-10 px-10 text-center font-sans font-normal lg:px-40" data-aos="fade-up">
         Dengan segala kerendahan hati dan dengan ucapan syukur atas Rahmat Allah Subhanahu wa Ta’ala, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir
         di acara pernikahan kami yang Insya Allah akan dilaksanakan pada:
