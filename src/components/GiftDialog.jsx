@@ -9,8 +9,8 @@ export default function GiftDialog({ isShow, setIsShow }) {
     setIsShow(false);
   };
 
-  const copyAccountNumber = () => {
-    navigator.clipboard.writeText(data.gift.transfer.accountNumber);
+  const copyAccountNumber = (accountNumber) => {
+    navigator.clipboard.writeText(accountNumber);
     toast.success("Nomor rekening berhasil disalin", {
       position: "bottom-center",
       autoClose: 1000,
@@ -54,7 +54,7 @@ export default function GiftDialog({ isShow, setIsShow }) {
                   Gift Transfer
                 </Dialog.Title>
                 <div className="my-10 flex flex-col items-center justify-center">
-                  <p className="text-center text-sm text-gray-500 mb-4">You can send wedding gifts by transfer to the following account :</p>
+                  <p className="mb-4 text-center text-sm text-gray-500">You can send wedding gifts by transfer to the following account :</p>
 
                   <div className="flex flex-col space-y-4">
                     {data.gift.transfer.map((bank, index) => {
@@ -62,7 +62,7 @@ export default function GiftDialog({ isShow, setIsShow }) {
                         <div className="flex flex-col items-center rounded bg-primary-100 py-2 " key={index}>
                           <img src={bank.bankLogo} className="my-4 w-1/3" alt="" />
                           <button
-                            onClick={copyAccountNumber}
+                            onClick={() => copyAccountNumber(bank.accountNumber)}
                             className="flex items-center justify-center space-x-2 rounded-full py-2 px-4 outline-none duration-300 hover:bg-primary-200 focus:outline-none"
                           >
                             <span>{bank.accountNumber}</span>
