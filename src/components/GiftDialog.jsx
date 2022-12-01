@@ -54,21 +54,27 @@ export default function GiftDialog({ isShow, setIsShow }) {
                   Gift Transfer
                 </Dialog.Title>
                 <div className="my-10 flex flex-col items-center justify-center">
-                  <p className="text-center text-sm text-gray-500">Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :</p>
-                  <img src={data.gift.transfer.bankLogo} className="my-4 w-1/3" alt="" />
-                  <button
-                    onClick={copyAccountNumber}
-                    className="flex items-center justify-center space-x-2 rounded-full py-2 px-4 outline-none duration-300 hover:bg-gray-100 focus:outline-none"
-                  >
-                    <span>{data.gift.transfer.accountNumber}</span>
-                    <FiCopy />
-                  </button>
-                  <h1>
-                    a.n <b>{data.gift.transfer.name}</b>
-                  </h1>
-                  <p className="mt-10 text-center text-sm text-gray-500">
-                    Sebelumnya, kami ucapkan terimakasih atas perhatian dan bentuk tanda cinta Bapak/Ibu/Saudara/i untuk kami
-                  </p>
+                  <p className="text-center text-sm text-gray-500 mb-4">You can send wedding gifts by transfer to the following account :</p>
+
+                  <div className="flex flex-col space-y-4">
+                    {data.gift.transfer.map((bank, index) => {
+                      return (
+                        <div className="flex flex-col items-center rounded bg-primary-100 py-2 " key={index}>
+                          <img src={bank.bankLogo} className="my-4 w-1/3" alt="" />
+                          <button
+                            onClick={copyAccountNumber}
+                            className="flex items-center justify-center space-x-2 rounded-full py-2 px-4 outline-none duration-300 hover:bg-primary-200 focus:outline-none"
+                          >
+                            <span>{bank.accountNumber}</span>
+                            <FiCopy />
+                          </button>
+                          <h1>
+                            a.n <b>{bank.name}</b>
+                          </h1>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 <button
                   type="button"
