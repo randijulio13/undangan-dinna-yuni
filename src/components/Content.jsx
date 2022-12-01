@@ -78,7 +78,7 @@ export default function Content({ cover }) {
         </div>
       </section> */}
 
-      <section className="relative bg-gradient-to-b from-primary-900 via-primary-500 to-primary-900 py-20">
+      <section className="relative bg-gradient-to-b from-primary-900 via-primary-800 to-primary-900 py-20">
         <Gallery data={data} />
       </section>
 

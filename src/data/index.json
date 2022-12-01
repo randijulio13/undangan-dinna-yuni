@@ -19,7 +19,7 @@
       "fatherName": "Rizal Nudin",
       "dob": "1990-10-01",
       "pob": "Palembang",
-      "photos": "../../photos/bride.jpg",
+      "photos": "../../photos/sm/bride.jpg",
       "type": "Bride",
       "instagram": "https://instagram.com/dinnafrnssca"
     },
@@ -30,31 +30,35 @@
       "fatherName": "Hasyim, S.Pd",
       "dob": "1990-01-10",
       "pob": "Palembang",
-      "photos": "../../photos/groom.jpg",
+      "photos": "../../photos/sm/groom.jpg",
       "type": "Groom",
       "instagram": "https://instagram.com/muhammad_yuniirawan"
     }
   ],
   "photos": {
-    "cover": "../../photos/sm/1.jpg",
+    "cover": "../../photos/sm/cover.jpg",
     "groom": "../../photos/sm/groom.jpg",
     "bride": "../../photos/sm/bride.jpg",
-    "cardContract": "../../photos/sm/14.jpg",
-    "cardReception": "../../photos/sm/15.jpg",
-    "coverPortrait": "../../photos/sm/5.jpg",
+    "cardContract": "../../photos/sm/card1.jpg",
+    "cardReception": "../../photos/sm/card2.jpg",
+    "coverPortrait": "../../photos/sm/coverportrait.jpg",
     "all": [
-      "../../photos/sm/12.jpg",
+      "../../photos/sm/1.jpg",
       "../../photos/sm/2.jpg",
       "../../photos/sm/3.jpg",
       "../../photos/sm/4.jpg",
-      "../../photos/sm/14.jpg",
-      "../../photos/sm/20.jpg",
-      "../../photos/sm/16.jpg",
-      "../../photos/sm/15.jpg",
+      "../../photos/sm/5.jpg",
+      "../../photos/sm/6.jpg",
+      "../../photos/sm/7.jpg",
+      "../../photos/sm/8.jpg",
       "../../photos/sm/9.jpg",
       "../../photos/sm/10.jpg",
       "../../photos/sm/11.jpg",
-      "../../photos/sm/1.jpg"
+      "../../photos/sm/12.jpg",
+      "../../photos/sm/13.jpg",
+      "../../photos/sm/14.jpg",
+      "../../photos/sm/15.jpg",
+      "../../photos/sm/16.jpg"
     ]
   },
   "gift": {

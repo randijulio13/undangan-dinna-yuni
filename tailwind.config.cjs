@@ -40,6 +40,32 @@ const customBlue = {
   900: "#357fb3",
 };
 
+const contessa = {
+  '50': '#fbf6f5',
+  '100': '#f6ecea',
+  '200': '#f0dcd8',
+  '300': '#e4c3bd',
+  '400': '#d3a096',
+  '500': '#ba7264',
+  '600': '#aa6558',
+  '700': '#8e5347',
+  '800': '#77463d',
+  '900': '#643f38',
+}
+
+const eunry = {
+  '50': '#fbf6f5',
+  '100': '#f6ecea',
+  '200': '#f0dcd8',
+  '300': '#e4c3bd',
+  '400': '#d3a096',
+  '500': '#c08073',
+  '600': '#aa6558',
+  '700': '#8e5347',
+  '800': '#76473e',
+  '900': '#643f38',
+}
+
 const main = {
   50: "#fff7e1",
   100: "#f9edd7",
@@ -59,7 +85,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: main,
+        primary: eunry,
       },
       fontFamily: {
         sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
