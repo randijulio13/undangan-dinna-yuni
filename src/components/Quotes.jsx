@@ -17,8 +17,8 @@ export default function Quotes() {
         </span>
       </div> */}
       <p className="px-10 text-center font-normal lg:px-40" data-aos="fade-up">
-        "Dan di antara tanda-tanda kekuasaan Allah ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tentram di samping-Nya
-        dan dijadikan-Nya rasa kasih sayang di antara kamu. Sesungguhnya yang demikian itu menjadi bukti kekuasaan Allah bagi kaum yang berfikir."
+        "And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you
+        compassion and mercy. Surely in this are signs for people who reflect."
       </p>
       <p className="text-center font-semibold" data-aos="fade-up">
         (QS. Ar- Rum 21)

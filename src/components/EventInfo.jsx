@@ -30,8 +30,7 @@ export default function EventInfo() {
     <div className="flex flex-col items-center justify-center">
       <Title className={`text-black`}>Assalamu’alaikum Warahmatullahi Wabarakatuh</Title>
       <p className="mt-10 px-10 text-center font-sans font-normal lg:px-40" data-aos="fade-up">
-        Dengan segala kerendahan hati dan dengan ucapan syukur atas Rahmat Allah Subhanahu wa Ta’ala, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir
-        di acara pernikahan kami yang Insya Allah akan dilaksanakan pada:
+      by the grace and blessing of Allah Subhanahu wa Ta’ala, we request the honor of your presence at our wedding at:
       </p>
       <div className="mt-10 columns-1 space-y-10 lg:mx-40 lg:columns-2 lg:space-x-10">
         <Card img={data.photos.cardContract}>

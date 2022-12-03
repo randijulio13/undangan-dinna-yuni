@@ -15,7 +15,7 @@ function Detail({ couple, ...props }) {
         {couple.fullName}
       </span>
       <span className="text-medium text px-4 text-center lg:text-lg font-sans text-white" {...props}>
-        {couple.type == "Groom" ? "Putra" : "Putri"} dari Bapak {couple.fatherName} <br /> dan Ibu {couple.motherName}
+        {couple.type == "Groom" ? "Son" : "Daughter"} of Bpk {couple.fatherName} <br /> & Ibu {couple.motherName}
       </span>
       <div className="flex h-full w-full items-center justify-center" {...props}>
         <a href={couple.instagram} className="rounded-full bg-white p-3 text-2xl text-primary-900 duration-300 hover:bg-primary-400 hover:text-white">

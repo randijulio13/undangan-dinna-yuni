@@ -11,7 +11,7 @@ export default function GiftDialog({ isShow, setIsShow }) {
 
   const copyAccountNumber = (accountNumber) => {
     navigator.clipboard.writeText(accountNumber);
-    toast.success("Nomor rekening berhasil disalin", {
+    toast.success("Account number copied to clipboard", {
       position: "bottom-center",
       autoClose: 1000,
       hideProgressBar: true,
