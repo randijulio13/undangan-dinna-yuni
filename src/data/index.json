@@ -37,6 +37,7 @@
   ],
   "photos": {
     "cover": "../../photos/sm/cover.jpg",
+    "coverMobile":"../../photos/sm/coverMobile.jpg",
     "groom": "../../photos/sm/groom.jpg",
     "bride": "../../photos/sm/bride.jpg",
     "cardContract": "../../photos/sm/card1.jpg",
