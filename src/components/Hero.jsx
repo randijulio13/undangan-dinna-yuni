@@ -9,7 +9,8 @@ export default function Hero() {
   return (
     <div className="h-screen items-center justify-center">
       <div className="absolute inset-0">
-        <img src={data.photos.cover} className="h-full w-full object-cover" alt="" />
+      <img src={data.photos.cover} className="hidden lg:block h-full w-full object-cover" alt="" />
+          <img src={data.photos.coverMobile} className="block lg:hidden h-full w-full object-cover" alt="" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-900/50"></div>
       <div className="absolute top-0 flex w-full flex-col items-center justify-center py-20">
