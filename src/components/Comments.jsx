@@ -115,7 +115,7 @@ export default function Comments() {
   const [showMore, setShowMore] = useState(true);
 
   const getComments = async () => {
-    let url = `${import.meta.env.VITE_JSON_URL}/comments?eventId=${eventData.eventId}&_page=1&_limit=${limit}&_sort=timestamp&_order=desc`;
+    let url = `${import.meta.env.VITE_JSON_URL}/comments?limit=${limit}`;
     let { data } = await axios(url);
     setComments(data);
     setIsLoading(false);
